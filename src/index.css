@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		background: linear-gradient(
+			to left,
+			rgba(7, 27, 82, 1) 0%,
+			rgba(0, 128, 128, 1) 100%
+		);
+	}
+}
+
+@layer components {
+	.app-title {
+		@apply my-5 lg:my-10 font-bold text-4xl lg:text-6xl text-[#0ccac4];
+	}
+
+	.search-box {
+		@apply border-none outline-none p-2 w-full max-w-xs mb-7 rounded-lg;
+	}
+
+	.card-list {
+		@apply grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-4 gap-5;
+	}
+
+	.card-container {
+		@apply flex flex-col bg-[#95dada] border-gray-400 rounded-xl p-6 cursor-pointer transition-all space-y-2 hover:scale-105 select-none will-change-transform;
+	}
+
+	.card-container h2 {
+		@apply font-bold text-2xl;
+	}
+
+	.card-container img {
+		@apply rounded-full shadow-inner;
+	}
+}
